@@ -29,3 +29,19 @@
  */
 
 int* bubble_sort(int* vals, int n, bool SortAscending);
+
+/*
+ * Selection Sort Algorithm.
+ * vals: Elements to be sorted
+ * n: Number of elements
+ * isAscending: Set true to sort elements in Ascending order
+ * 
+ * Description: Selection sort finds the minimum element in the 
+ * list sets it as the first element. In each iteration , the 
+ * next smallest element is found and placed in order.
+ * Example: Sorting in ascending order, (5,8,1,2,3) using selection sort.
+ * (1,8,5,2,3)->(1,2,8,5,3)->(1,2,3,8,5)->(1,2,3,5,8)
+ * 
+ */
+
+int* selection_sort(int *vals, int n, bool isAscending);
