@@ -62,3 +62,34 @@ int* bubble_sort(int* vals, int n, bool isAscending);
  */
 
 int* selection_sort(int *vals, int n, bool isAscending);
+
+
+/*
+ *
+ * Insertion Sort Algorithm 
+ * 
+ * Time Complexity: O(n²)
+ *
+ * Description: The list of elements has two parts, 
+ * the first part is sorted and the second part is unsorted.
+ * We pick up an element from the unsorted list and fit it into
+ * it's appropriate position in the sorted list till the entire
+ * list is sorted. 
+ * 
+ * Example:  Sorting in ascending order using insertion sort.
+ *  (12,1,5,9,0)                        
+ *  Compare 12 and 1. 12>1 , swap.          
+ * ->(1,12,5,9,0)                     
+ *  Compare 12 and 5. 12>5 , swap
+ * ->(1,5,12,9,0)                     
+ *  Compare 12 and 9. 12>9 ,swap. 
+ * ->(1,5,9,12,0)                       
+ *  Compare 12 and 0. 12>0 , swap. ->(1,5,9,0,12) 
+ *  Compare 9 and 0. 9>0, swap ->(1,5,0,9,12)     
+ *  Compare 5 and 0. 5>9 , swap ->(1,0,5,9,12)     
+ *  Compare 1 and 0. 1>0, swap -> (0,1,5,9,12)    
+ *
+ */
+
+
+ int* insertion_sort(int *vals, int n, bool isAscending);
