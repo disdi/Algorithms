@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "sort.h"
 
-int* bubble_sort(int* vals, int n, bool SortAscending) 
+int* bubble_sort(int* vals, int n, bool isAscending) 
 {
 	int pass,index;
 	pass=0; // Number of passes
@@ -16,7 +16,7 @@ int* bubble_sort(int* vals, int n, bool SortAscending)
 		for(index=0; index<(n-1); index++) 
 		{	
 			bool swap=false;
-			if(SortAscending) 
+			if(isAscending) 
 			{
 				if(vals[index]>vals[index+1]) 
 					swap=true;

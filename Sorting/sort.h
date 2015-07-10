@@ -28,7 +28,7 @@
  * 
  */
 
-int* bubble_sort(int* vals, int n, bool SortAscending);
+int* bubble_sort(int* vals, int n, bool isAscending);
 
 /*
  * Selection Sort Algorithm.
