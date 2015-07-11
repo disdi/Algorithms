@@ -1,0 +1,97 @@
+
+Sorting Algorithms
+
+_________________________________________________________________________________________________________
+
+
+1) Bubble Sort Algorithm: 
+
+Time Complexity-
+
+Worst case: O(n²)
+Best case: O(n)
+Average case: O(n²)
+
+In the best case, the list is already sorted. In such a case, one would have to traverse through the entire list, 
+hence Bubble Sort would have time complexity O(n) for a best case scenario. 
+In the worst scenario, the entire list will be in reverse order. 
+
+Working-
+
+Each iteration through the list is a pass, adjacent elements are compared and swapped depending on whether we 
+want to sort the list in ascending or descending order. We keep iterating till the entire list is sorted i.e 
+no passes occur after a complete traversal of all n elements.
+
+Example: Sorting (1202,1,20,4,900,42) using bubble sort in ascending order.
+  		 PASS 1: 1202>1 so switch 1202 and 1 -> (1,1202,20,4,900,42)
+ 					1202>20 so switch 1202 and 20 -> (1,20,1202,4,900,42)
+ 					1202>4 so switch 1202 and 4 -> (1,20,4,1202,900,42)
+ 					1202>900 so switch 1202 and 900 -> (1,20,4,900,1202,42)
+ 					1202>42 so switch 1202 and 42 -> (1,20,4,900,42,1202)
+ 		 PASS 2: (1,20,4,900,42,1202) -> (1,4,20,900,42,1202) -> (1,4,20,900,42,1202)->(1,4,20,42,900,1202)
+
+ Advantages/Disadvantages-
+
+ Inefficient and slow Algorithm for large lists.
+ Something you should stay away from for practical purposes.  
+
+__________________________________________________________________________________________________________
+
+
+2) Selection Sort Algorithm:
+
+Time Complexity-
+
+Worst case: О(n²)
+Best case: О(n²)
+Average case: О(n²)
+
+Best case scenario is O(n²) because there is nothing built into the algorithm to check whether the list
+is sorted.
+
+Working-
+Selection sort finds the minimum element in the list sets it as the first element. In each iteration , the 
+next smallest element is found and placed in order.
+
+Example: Sorting in ascending order, (5,8,1,2,3) using selection sort.
+ 		(1,8,5,2,3)->(1,2,8,5,3)->(1,2,3,8,5)->(1,2,3,5,8)
+
+Advantages/Disadvantages-
+
+Inefficient and slow, but faster than Bubble Sort since number of swaps
+per pass is lesser. 
+
+__________________________________________________________________________________________________________
+
+3) Insertion Sort Algorithm
+
+Time Complexity-
+Best case: O(n)
+Worst case: O(n²)
+Average case: O(n²)
+
+Best case scenario is when the list is already sorted. Worst
+case scenario is when the list is in reverse order. 
+
+
+Working- 
+ The list of elements has two parts, the first part is sorted and the second part is unsorted.
+ We pick up an element from the unsorted list and fit it into it's appropriate position in the 
+ sorted list till the entire list is sorted. 
+  
+ Example:  Sorting in ascending order using insertion sort.
+  (12,1,5,9,0)                        
+  Compare 12 and 1. 12>1 , swap.          
+  ->(1,12,5,9,0)                     
+  Compare 12 and 5. 12>5 , swap
+  ->(1,5,12,9,0)                     
+  Compare 12 and 9. 12>9 ,swap. 
+  ->(1,5,9,12,0)                       
+  Compare 12 and 0. 12>0 , swap. ->(1,5,9,0,12) 
+  Compare 9 and 0. 9>0, swap ->(1,5,0,9,12)     
+  Compare 5 and 0. 5>9 , swap ->(1,0,5,9,12)     
+  Compare 1 and 0. 1>0, swap -> (0,1,5,9,12)  
+
+Advantages/Disadvantages-
+Inefficient for large lists. Efficient for small lists and 
+lists that are already sorted.
